@@ -71,8 +71,10 @@ npm run preview
 
 6. **Supabase Auth** (for admin login on production):  
    Dashboard → **Authentication** → **URL configuration**  
-   - **Site URL:** `https://YOUR-PROJECT.vercel.app`  
-   - **Redirect URLs:** add `https://YOUR-PROJECT.vercel.app/**`
+   - **Site URL:** `https://aarush-pizza.vercel.app`  
+   - **Redirect URLs:** `https://aarush-pizza.vercel.app/**`
+
+**Live site:** [https://aarush-pizza.vercel.app](https://aarush-pizza.vercel.app) · Admin: [/admin/login](https://aarush-pizza.vercel.app/admin/login)
 
 `vercel.json` includes SPA rewrites so `/admin` routes work on refresh.
 
