@@ -55,6 +55,32 @@ npm run build
 npm run preview
 ```
 
-## Deploy
+## Deploy on Vercel
 
-Deploy the `dist` folder (Vercel, Netlify, etc.) and set the same `VITE_*` env vars in the host dashboard.
+1. Push this repo to GitHub (already: `AKking5120/aarush-pizza`).
+2. Go to [vercel.com/new](https://vercel.com/new) → **Import** `aarush-pizza`.
+3. Framework preset: **Vite** (auto-detected). Build: `npm run build`, output: `dist`.
+4. **Environment variables** (Production + Preview):
+
+   | Name | Value |
+   |------|--------|
+   | `VITE_SUPABASE_URL` | `https://lvdtyokfacscamttjquu.supabase.co` |
+   | `VITE_SUPABASE_ANON_KEY` | your Supabase anon key (Dashboard → Settings → API) |
+
+5. Click **Deploy**.
+
+6. **Supabase Auth** (for admin login on production):  
+   Dashboard → **Authentication** → **URL configuration**  
+   - **Site URL:** `https://YOUR-PROJECT.vercel.app`  
+   - **Redirect URLs:** add `https://YOUR-PROJECT.vercel.app/**`
+
+`vercel.json` includes SPA rewrites so `/admin` routes work on refresh.
+
+### CLI (optional)
+
+```bash
+npx vercel
+npx vercel --prod
+```
+
+Set the same `VITE_*` variables when prompted or in the Vercel project settings.
