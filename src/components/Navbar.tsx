@@ -27,15 +27,13 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 bg-ink border-b border-gray-800">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between min-h-[4.25rem] py-2">
-          <a href="#home" className="min-w-0 group">
-            <span
-              className="block text-2xl sm:text-[1.75rem] font-bold font-brand tracking-tight text-amber-400 group-hover:text-orange-300 transition-colors leading-none"
-            >
+        <div className="flex items-center justify-between h-16">
+          <a href="#home" className="min-w-0">
+            <span className="text-lg font-bold text-white tracking-wide">
               {business.brandName}
             </span>
-            <span className="hidden sm:block text-xs text-orange-200/70 font-medium leading-snug mt-1">
-              {business.navSubtitle}
+            <span className="hidden sm:block text-[11px] text-gray-500 leading-tight">
+              Oven repair & spare parts
             </span>
           </a>
 

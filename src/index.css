@@ -6,11 +6,6 @@
   --color-panel-elevated: #1e232b;
   --color-accent: #ea580c;
   --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-brand: 'Poppins', system-ui, sans-serif;
-}
-
-@utility font-brand {
-  font-family: var(--font-brand);
 }
 
 @layer base {
