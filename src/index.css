@@ -5,7 +5,7 @@
   --color-panel: #161a20;
   --color-panel-elevated: #1e232b;
   --color-accent: #ea580c;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
 @layer base {
@@ -20,6 +20,19 @@
 
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-orange-500;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 

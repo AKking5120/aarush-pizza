@@ -7,12 +7,10 @@ import { Hero } from './components/Hero'
 import { LocationSection } from './components/LocationSection'
 import { MobileQuickDock } from './components/MobileQuickDock'
 import { Navbar } from './components/Navbar'
-import { ProcessTimeline } from './components/ProcessTimeline'
 import { ReviewSection } from './components/ReviewSection'
 import { Services } from './components/Services'
 import { SpareParts } from './components/SpareParts'
 import { StructuredData } from './components/StructuredData'
-import { WhyChooseUs } from './components/WhyChooseUs'
 import { EnquiryProvider } from './context/EnquiryContext'
 
 export function PublicApp() {
@@ -21,13 +19,11 @@ export function PublicApp() {
       <StructuredData />
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1">
+        <main className="flex-1 max-w-5xl mx-auto w-full">
           <Hero />
           <About />
           <Services />
           <SpareParts />
-          <WhyChooseUs />
-          <ProcessTimeline />
           <Gallery />
           <ReviewSection />
           <LocationSection />
